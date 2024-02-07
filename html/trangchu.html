@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" href="../img/logo.png" />
+        <title>For my destiny</title>
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    
+    <body class="page__main">
+        <div class="buttons">
+            <a href="trangchu.html" class="btn btn-bir">Home</a>
+            <a href="thoigian.html" class="btn btn-timeline">Thời gian hạnh phúc</a>
+            <a href="picture.html" class="btn btn-picture">Ảnh kỷ niệm</a>
+        </div>
+
+        <img src="../img/main.jpg" alt="" class="cover" />
+
+        <audio id="player" autoplay loop>
+            <source src="../music/trangchu.mp3" type="audio/mp3" />
+        </audio>
+        <div class="toothless1"><img src="../img/toothless-dancing.gif" alt="right"></div>
+        <div class="toothless2"><img src="../img/toothless-dancing2.gif" alt="left"></div>
+        <div class="fireworks-container"> </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const fireworksContainer = document.querySelector(".fireworks-container");
+    
+                function createFirework() {
+                    const firework = document.createElement("div");
+                    firework.classList.add("firework");
+                    firework.style.left = Math.random() * 100 + "vw";
+                    firework.style.top = Math.random() * 100 + "vh";
+                    fireworksContainer.appendChild(firework);
+    
+                    setTimeout(() => {
+                        firework.remove();
+                    }, 500);
+                }
+    
+                setInterval(createFirework, 530);
+            });
+        </script>
+    </body>
+    </html>
+    </body>
+</html>
